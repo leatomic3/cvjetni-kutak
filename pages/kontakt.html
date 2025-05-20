@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="hr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kontakt - Cvjetni kutak</title>
+    <link rel="stylesheet" href="../style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <h1 class="logo"><a href="../index.html">Cvjetni kutak</a></h1>
+        <button class="hamburger" id="hamburger">&#9776;</button>
+        <ul class="nav-links" id="nav-links">
+          <li><a href="../index.html">Početna</a></li>
+          <li><a href="ponuda.html">Ponuda</a></li>
+          <li><a href="kontakt.html" class="active">Kontakt</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="kontakt-section">
+      <section class="uvod">
+        <h2>Kontaktirajte nas</h2>
+        <p>
+          Imate pitanje, upit ili želite naručiti buket? Ispunite obrazac i
+          javit ćemo vam se u najkraćem roku.
+        </p>
+      </section>
+
+      <section class="uvod">
+        <form class="kontakt-forma">
+          <div
+            id="kontakt-poruka"
+            style="
+              display: none;
+              color: #2d6a4f;
+              font-weight: 600;
+              text-align: center;
+              margin-bottom: 1rem;
+            "
+          ></div>
+
+          <label for="ime">Ime i prezime:</label><br />
+          <input type="text" id="ime" name="ime" required /><br /><br />
+
+          <label for="email">Email adresa:</label><br />
+          <input type="email" id="email" name="email" required /><br /><br />
+
+          <label for="prigoda">Povod vašeg upita:</label><br />
+          <select id="prigoda" name="prigoda">
+            <option value="rođendan">Rođendan</option>
+            <option value="vjenčanje">Vjenčanje</option>
+            <option value="sućut">Sućut</option>
+            <option value="zahvala">Zahvala</option>
+            <option value="ostalo">Ostalo</option></select
+          ><br /><br />
+
+          <label for="poruka">Vaša poruka:</label><br />
+          <textarea id="poruka" name="poruka" rows="5" required></textarea
+          ><br /><br />
+
+          <button type="submit" class="btn">Pošalji</button>
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2025 Cvjetni kutak. Sva prava pridržana.</p>
+    </footer>
+
+    <script type="module">
+      import emailjs from "https://cdn.jsdelivr.net/npm/@emailjs/browser@3.11.0/+esm";
+      emailjs.init("4YF4Ef599UpUosNXq");
+      window.emailjs = emailjs;
+    </script>
+
+    <script src="../script.js"></script>
+  </body>
+</html>

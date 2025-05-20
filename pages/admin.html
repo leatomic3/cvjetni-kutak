@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="hr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin - Cvjetni kutak</title>
+    <link rel="stylesheet" href="../style.css" />
+    <style>
+      .admin-container {
+        max-width: 600px;
+        margin: 2rem auto;
+        background-color: #f8fefc;
+        padding: 2rem;
+        border-radius: 10px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        text-align: center;
+      }
+
+      .admin-container h2 {
+        margin-bottom: 1.5rem;
+        color: #2b7766;
+      }
+
+      .admin-container input,
+      .admin-container textarea {
+        width: 100%;
+        padding: 0.7rem;
+        margin-bottom: 1rem;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+      }
+
+      .admin-container button {
+        padding: 0.6rem 1.2rem;
+        background-color: #2b7766;
+        color: white;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+      }
+
+      .admin-container button:hover {
+        background-color: #245f53;
+      }
+
+      .success-message {
+        color: green;
+        display: none;
+        justify-content: center;
+        align-items: center;
+        gap: 0.5rem;
+        margin-top: 1rem;
+      }
+
+      .hidden {
+        display: none;
+      }
+
+      .admin-kartica {
+        background-color: #f4fcfa;
+        border: 1px solid #d3ebe3;
+        border-radius: 10px;
+        padding: 1rem;
+        margin: 1rem auto;
+        max-width: 500px;
+        text-align: left;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+      }
+
+      .admin-kartica p {
+        margin: 0.3rem 0;
+        font-size: 0.95rem;
+      }
+
+      .admin-kartica img {
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+        margin-bottom: 0.5rem;
+      }
+
+      .btn-obrisi {
+        background-color: #c62828;
+        color: white;
+        border: none;
+        padding: 0.5rem 1rem;
+        border-radius: 6px;
+        cursor: pointer;
+        margin-top: 0.8rem;
+      }
+
+      .btn-obrisi:hover {
+        background-color: #a4161a;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="admin-container" id="login-box">
+      <h2>Admin prijava</h2>
+      <input
+        type="password"
+        id="admin-password"
+        placeholder="Upišite lozinku"
+      />
+      <button id="gumb-prijava">Prijavi se</button>
+      <p id="poruka" style="color: red; margin-top: 0.5rem"></p>
+    </div>
+
+    <div class="admin-container hidden" id="admin-sučeje">
+      <h2>Dodaj novi buket</h2>
+      <input type="text" id="naziv" placeholder="Naziv buketa" />
+      <textarea id="opis" placeholder="Opis buketa"></textarea>
+      <input type="text" id="slika" placeholder="URL slike" />
+      <button onclick="dodajBuket()">Dodaj buket</button>
+      <div class="success-message" id="uspjeh-msg">
+        Buket je uspješno dodan!
+      </div>
+    </div>
+
+    <section class="admin-container" id="admin-buketi-lista"></section>
+
+    <section class="admin-container hidden" id="admin-narudzbe">
+      <h2>Primljene narudžbe</h2>
+      <div id="narudzbe-lista"></div>
+    </section>
+
+    <script src="../script.js"></script>
+  </body>
+</html>

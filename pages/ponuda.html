@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="hr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ponuda - Cvjetni kutak</title>
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <h1 class="logo"><a href="../index.html">Cvjetni kutak</a></h1>
+
+        <button class="hamburger" id="hamburger">&#9776;</button>
+
+        <ul class="nav-links" id="nav-links">
+          <li><a href="../index.html">Početna</a></li>
+          <li><a href="ponuda.html" class="active">Ponuda</a></li>
+          <li><a href="kontakt.html">Kontakt</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="uvod">
+        <h2>Naša ponuda</h2>
+        <p>
+          U ponudi imamo raznovrsne bukete, aranžmane i cvjetne dekoracije za
+          sve prigode – od rođendana do vjenčanja.
+        </p>
+      </section>
+
+      <section class="ponuda-buketa" id="ponuda-container">
+        <div class="buket-kartica">
+          <img src="../img/buket1.jpg" alt="Romantični buket" />
+          <h3>Romantični buket</h3>
+          <p>Idealno za posebne trenutke. Ruže, ljiljani i ljubav.</p>
+          <form class="narudzba-forma" data-tip="Romantični buket">
+            <label><strong>Odaberite veličinu:</strong></label>
+            <div class="radio-grupa">
+              <label
+                ><input type="radio" name="velicina1" value="mali" />
+                Mali</label
+              >
+              <label
+                ><input type="radio" name="velicina1" value="srednji" />
+                Srednji</label
+              >
+              <label
+                ><input type="radio" name="velicina1" value="veliki" />
+                Veliki</label
+              >
+            </div>
+            <p class="cijena-prikaz"></p>
+            <label>Datum isporuke:</label>
+            <input type="date" class="datum-isporuke" required />
+            <label>Dodatna poruka:</label>
+            <textarea
+              name="poruka"
+              rows="2"
+              placeholder="Vaša poruka..."
+            ></textarea>
+            <button type="submit" class="btn-naruci">Naruči</button>
+          </form>
+        </div>
+
+        <div class="buket-kartica">
+          <img src="../img/buket2.jpg" alt="Proljetni mix" />
+          <h3>Proljetni mix</h3>
+          <p>Svježina proljeća u šarenom buketu punom boja.</p>
+          <form class="narudzba-forma" data-tip="Proljetni mix">
+            <label><strong>Odaberite veličinu:</strong></label>
+            <div class="radio-grupa">
+              <label
+                ><input type="radio" name="velicina2" value="mali" />
+                Mali</label
+              >
+              <label
+                ><input type="radio" name="velicina2" value="srednji" />
+                Srednji</label
+              >
+              <label
+                ><input type="radio" name="velicina2" value="veliki" />
+                Veliki</label
+              >
+            </div>
+            <p class="cijena-prikaz"></p>
+            <label>Datum isporuke:</label>
+            <input type="date" class="datum-isporuke" required />
+            <label>Dodatna poruka:</label>
+            <textarea
+              name="poruka"
+              rows="2"
+              placeholder="Vaša poruka..."
+            ></textarea>
+            <button type="submit" class="btn-naruci">Naruči</button>
+          </form>
+        </div>
+
+        <div class="buket-kartica">
+          <img src="../img/buket3.jpg" alt="Bijeli klasik" />
+          <h3>Bijeli klasik</h3>
+          <p>Za sofisticirane prilike – čisto, jednostavno i elegantno.</p>
+          <form class="narudzba-forma" data-tip="Bijeli klasik">
+            <label><strong>Odaberite veličinu:</strong></label>
+            <div class="radio-grupa">
+              <label
+                ><input type="radio" name="velicina3" value="mali" />
+                Mali</label
+              >
+              <label
+                ><input type="radio" name="velicina3" value="srednji" />
+                Srednji</label
+              >
+              <label
+                ><input type="radio" name="velicina3" value="veliki" />
+                Veliki</label
+              >
+            </div>
+            <p class="cijena-prikaz"></p>
+            <label>Datum isporuke:</label>
+            <input type="date" class="datum-isporuke" required />
+            <label>Dodatna poruka:</label>
+            <textarea
+              name="poruka"
+              rows="2"
+              placeholder="Vaša poruka..."
+            ></textarea>
+            <button type="submit" class="btn-naruci">Naruči</button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2025 Cvjetni kutak. Sva prava pridržana.</p>
+    </footer>
+
+    <script src="../script.js"></script>
+  </body>
+</html>
