@@ -410,6 +410,28 @@ header {
   background-color: #1b4332;
 }
 
+@media (max-width: 480px) {
+  .potvrda-kutija {
+    padding: 1.2rem;
+    font-size: 0.95rem;
+    margin: 7rem auto;
+    width: 90%;
+  }
+
+  .potvrda-kutija h2 {
+    font-size: 1.5rem;
+  }
+
+  .potvrda-kutija p {
+    font-size: 0.9rem;
+  }
+
+  .potvrda-kutija .btn-natrag {
+    font-size: 0.9rem;
+    padding: 0.6rem 1.2rem;
+  }
+}
+
 .kontakt-forma {
   max-width: 600px;
   margin: 2rem auto;
